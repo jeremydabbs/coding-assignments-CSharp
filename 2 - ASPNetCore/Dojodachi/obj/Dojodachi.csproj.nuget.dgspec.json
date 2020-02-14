@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jndab\\Documents\\CodingDojo\\CSharp\\ASPNetCore\\Dojodachi\\Dojodachi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jndab\\Documents\\CodingDojo\\CSharp\\ASPNetCore\\Dojodachi\\Dojodachi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jndab\\Documents\\CodingDojo\\CSharp\\ASPNetCore\\Dojodachi\\Dojodachi.csproj",
+        "projectName": "Dojodachi",
+        "projectPath": "C:\\Users\\jndab\\Documents\\CodingDojo\\CSharp\\ASPNetCore\\Dojodachi\\Dojodachi.csproj",
+        "packagesPath": "C:\\Users\\jndab\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jndab\\Documents\\CodingDojo\\CSharp\\ASPNetCore\\Dojodachi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jndab\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@model DojoSurvey.Models.Survey
+
+<h1>Survey Results</h1>
+<p>Name: @Model.Name</p>
+<p>Dojo Location: @Model.Location</p>
+<p>Favorite Language: @Model.Language</p>
+<p>Comments: @Model.Comments</p>
+<p>This survey was submitted on @Model.CreatedAt.ToLongDateString() at @Model.CreatedAt.ToLongTimeString().</p>
+<a href="/">Return to home</a>

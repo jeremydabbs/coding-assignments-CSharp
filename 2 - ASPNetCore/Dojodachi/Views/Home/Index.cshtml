@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+    <div class="container stats">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+                @* <p>Fullness: @TempData["Fullness"]</p> *@
+                <p>Fullness: @ViewBag.fullness</p>
+            </div>
+            <div class="col-md-auto">
+                <p>Happiness: @ViewBag.happiness</p>
+            </div>
+            <div class="col-md-auto">
+                <p>Energy: @ViewBag.energy</p>
+            </div>
+            <div class="col-md-auto">
+                <p>Meals: @ViewBag.meals</p>
+            </div>
+        </div><!--end of row-->
+    </div><!--end of stats section-->
+
+    <div class="container domodachi">
+        <!--Emoji images came from https://emojiisland.com/pages/download-new-emoji-icons-in-png-ios-10 -->
+        @if((string)ViewBag.deceased == "False")
+        {
+            <img style="max-width: 15%; margin-bottom: 10px;" src="~/img/Smliing_Emoji_Icon_large.png" alt="Smiling Domodachi">
+        }
+        else{
+            <img style="max-width: 15%; margin-bottom: 10px;" src="~/img/Dizzy_Emoji_Icon_large.png" alt="Deceased Domodachi">
+        }
+        <p>@ViewBag.message</p>
+    </div><!--end of domodachi section-->
+
+    <div class="container commands">
+    @if((string)ViewBag.complete == "False" )
+    {
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+            <form action="/feed" method="GET">
+                <button>Feed</button>
+            </form>
+            </div>
+            <div class="col-md-auto">
+            <form action="/play" method="GET">
+                <button>Play</button>
+            </form>
+            </div>
+            <div class="col-md-auto">
+            <form action="/work" method="GET">
+                <button>Work</button>
+            </form>
+            </div>
+            <div class="col-md-auto">
+            <form action="/sleep" method="GET">
+                <button>Sleep</button>
+            </form>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-md-center">
+            <form action="/restart" method="GET">
+                <button>Restart</button>
+            </form>
+        </div>
+    }
+    </div><!--end of command section-->
+
+</div>

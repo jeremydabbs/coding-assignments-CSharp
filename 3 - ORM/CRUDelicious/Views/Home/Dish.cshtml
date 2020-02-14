@@ -1,0 +1,15 @@
+@model Dish
+
+<a href="/">Home</a>
+
+<h1>@ViewBag.DishInfo.Name</h1>
+<h2>@ViewBag.DishInfo.Chef</h2>
+
+<p>Calories: @ViewBag.DishInfo.Calories</p>
+<p>Tastiness: @ViewBag.DishInfo.Tastiness</p>
+<p>Description: @ViewBag.DishInfo.Description</p>
+
+<!--Edit Button-->
+<a href="/edit/@ViewBag.DishInfo.DishId"><button>Edit</button></a>
+<!--Delete Button-->
+<a href="/delete/@ViewBag.DishInfo.DishId"><button>Delete</button></a>

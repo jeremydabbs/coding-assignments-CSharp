@@ -1,0 +1,14 @@
+@model List<User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>Here are some Users</h2>
+    @* <p>@Model.Messages</p> *@
+    @foreach (var user in Model)
+    {
+        <p>@user.FirstName @user.LastName</p>
+    }
+</div>

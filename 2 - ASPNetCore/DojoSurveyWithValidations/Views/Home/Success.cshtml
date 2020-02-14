@@ -1,0 +1,20 @@
+@model Survey
+
+<h1>Survey Results: </h1>
+<p>Name: @Model.Name</p>
+<p>Email Address: @Model.Email</p>
+<p>Dojo Location: @Model.Location</p>
+<p>Favorite Language: @Model.Language</p>
+<p>Comments: 
+    @if(@Model.Comments == null)
+    {
+        <p>@Model.Name has nothing to say.</p>
+    }
+    else
+    {
+        <p>@Model.Comments</p>
+    }
+</p>
+<p>@ViewBag.Time.ToLongDateString()</p>
+
+<a href="/">Return to survey</a>

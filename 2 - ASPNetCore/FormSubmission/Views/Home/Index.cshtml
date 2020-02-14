@@ -1,0 +1,28 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+    <div style="color: red;" asp-validation-summary="All"></div>
+    <form asp-action="Create" asp-controller="Home" method="post">
+        @* <span asp-validation-for="FirstName"></span> *@
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName"><br>
+        @* <span asp-validation-for="LastName"></span> *@
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName"><br>
+        @* <span asp-validation-for="Age"></span> *@
+        <label asp-for="Age"></label>
+        <input asp-for="Age"><br>
+        @* <span asp-validation-for="Email"></span> *@
+        <label asp-for="Email"></label>
+        <input asp-for="Email"><br>
+        @* <span asp-validation-for="Password"></span> *@
+        <label asp-for="Password"></label>
+        <input asp-for="Password"><br>
+        <input value="Add User" type="submit">    
+    </form>
+</div>

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Chef>
+
+<div class="text-center">
+    <h3 class="display-5">Chefs | <a asp-action="Dishes">Dishes</a></h3>
+</div>
+<a asp-action="NewChef" asp-controller="Home">Add a Chef</a>
+
+<h2>Check out our roster of Chefs!</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th># of Dishes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in @ViewBag.AllChefs)
+        {
+            <tr>
+                <td>@c.FirstName @c.LastName</td>
+                <td>@c.Age() or @((((int.Parse(DateTime.Now.ToString("yyyyMMdd"))-(int.Parse(c.Birthday.ToString("yyyyMMdd"))))/10000)))</td>
+                <td>@c.CreatedDishes.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>

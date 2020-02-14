@@ -1,0 +1,11 @@
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\bin\Debug\netcoreapp2.2\FundamentalsI.deps.json
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\bin\Debug\netcoreapp2.2\FundamentalsI.runtimeconfig.json
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\bin\Debug\netcoreapp2.2\FundamentalsI.runtimeconfig.dev.json
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\bin\Debug\netcoreapp2.2\FundamentalsI.dll
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\bin\Debug\netcoreapp2.2\FundamentalsI.pdb
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\obj\Debug\netcoreapp2.2\FundamentalsI.csprojAssemblyReference.cache
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\obj\Debug\netcoreapp2.2\FundamentalsI.csproj.CoreCompileInputs.cache
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\obj\Debug\netcoreapp2.2\FundamentalsI.AssemblyInfoInputs.cache
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\obj\Debug\netcoreapp2.2\FundamentalsI.AssemblyInfo.cs
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\obj\Debug\netcoreapp2.2\FundamentalsI.dll
+C:\Users\jndab\Documents\CodingDojo\CSharp\FundamentalsI\obj\Debug\netcoreapp2.2\FundamentalsI.pdb

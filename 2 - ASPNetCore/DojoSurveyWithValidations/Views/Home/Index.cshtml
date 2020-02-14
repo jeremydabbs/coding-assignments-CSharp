@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Survey
+
+<h1>Take our survey!</h1>
+<div style="color: red;" asp-validation-summary="All"></div>
+<form asp-action="Process" asp-controller="Home" method="post">
+        <label asp-for="Name"></label>
+        <input asp-for="Name"><br>
+        <label asp-for="Location"></label>
+        <select asp-for="Location">
+            <option value="">--</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Seattle">Seattle</option>
+        </select><br>
+        <label asp-for="Language"></label>
+        <select asp-for="Language">
+            <option value="">--</option>
+            <option value="C#">C#</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+        </select><br>
+        <label asp-for="Comments"></label><br>
+        <textarea name="Comments"></textarea><br>
+        <label asp-for="Email"></label>
+        <input asp-for="Email"><br>
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday"><br>
+        <label asp-for="Password"></label>
+        <input asp-for="Password"><br>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword"><br>
+        <input type="submit" value="Submit Your Survey">
+    </form>

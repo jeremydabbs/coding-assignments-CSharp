@@ -1,0 +1,53 @@
+@model List<Wedding>
+
+<header>
+    <h1>Welcome to the Wedding Planner, @ViewBag.User.FirstName!</h1>
+    <a asp-action="Logout" asp-controller="Home">Logout</a>
+</header>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var w in Model)
+        {
+            <tr>
+                <td><a asp-action="Wedding" asp-controller="Wedding" asp-route-weddingId="@w.WeddingId">@w.WedderOne & @w.WedderTwo</a></td>
+                <td>@w.Date.ToLongDateString()</td>
+                <td>@w.Date.ToShortTimeString()</td>
+                <td>@w.GuestList.Count</td>
+                @if (ViewBag.User.UserId == w.Planner.UserId)
+                {
+                    <td><a role="button" class="btn btn-danger btn-sm" asp-action="DeleteWedding" asp-controller="Wedding" asp-route-weddingId="@w.WeddingId">Delete</a></td>
+                }
+                else 
+                {
+                    @* @if (w.GuestList.All(r => r.UserId != ViewBag.User.UserId))
+                    {
+                        <td><a role="button" class="btn btn-success btn-sm" asp-action="RSVP" asp-controller="Wedding" asp-route-weddingId="@w.WeddingId">RSVP</a></td>
+                    }
+                    @if (w.GuestList.Any(r => r.UserId == ViewBag.User.UserId))
+                    {
+                        <td><a role="button" class="btn btn-warning btn-sm" asp-action="UnRSVP" asp-controller="Wedding" asp-route-weddingId="@w.WeddingId">Un-RSVP</a></td>
+                    }  *@
+                    @if (w.GuestList.All(r => r.UserId != ViewBag.User.UserId))
+                    {
+                        <td><a role="button" class="btn btn-success btn-sm" asp-action="Reservation" asp-controller="Wedding" asp-route-weddingId="@w.WeddingId" asp-route-status="rsvp" asp-route-userId="@ViewBag.User.UserId">RSVP</a></td>
+                    }
+                    @if (w.GuestList.Any(r => r.UserId == ViewBag.User.UserId))
+                    {
+                        <td><a role="button" class="btn btn-warning btn-sm" asp-action="Reservation" asp-controller="Wedding" asp-route-weddingId="@w.WeddingId" asp-route-status="unrsvp" asp-route-userId="@ViewBag.User.UserId">Un-RSVP</a></td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="New" asp-controller="Wedding">New Wedding</a>

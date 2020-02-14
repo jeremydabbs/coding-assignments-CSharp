@@ -1,0 +1,5 @@
+> dotnet c:\Users\jndab\Documents\CodingDojo\CSharp\FirstCSharp\bin\Debug\netcoreapp2.2\FirstCSharp.dll
+Hello World!
+PS C:\Users\jndab\Documents\CodingDojo\CSharp\FirstCSharp> dotnet run
+Hello World!
+PS C:\Users\jndab\Documents\CodingDojo\CSharp\FirstCSharp>

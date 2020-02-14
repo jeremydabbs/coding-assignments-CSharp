@@ -1,0 +1,25 @@
+@* @using Portfolio.Models
+@model User
+
+<form asp-action="Process" asp-controller="Home" method="post">
+    <input asp-for="Name">
+    <input asp-for="Location">
+    <input asp-for="Language">
+    <textarea asp-for="Comments"></textarea>
+</form> *@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+        <!--In this context '~' refers to the wwwroot folder-->
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <header>Home | <a href="/projects">Projects</a> | <a href="/contact">Contact</a></header>
+        <img id="headshot" src="~/img/headshot.jpg" alt="This is me. #believeit">
+        <h2>Jeremy Dabbs</h2>
+        <p>I am learning how to code!</p>
+    </body>
+</html>
